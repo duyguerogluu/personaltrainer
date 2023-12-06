@@ -18,6 +18,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:personaltrainer/functions/duygu_nav.dart';
+import 'package:personaltrainer/screens/graphics_screen.dart';
 import 'package:personaltrainer/screens/main_screen.dart';
 import 'package:personaltrainer/screens/profile_page_screen.dart';
 import 'package:personaltrainer/screens/user_profile_page.dart';
@@ -37,7 +38,7 @@ class BottomNavBarRiverpod extends ChangeNotifier {
         CupertinoIcons.cart,
         color: Colors.black54,
       ),
-      label: "Sepetim",
+      label: "Grafik",
     ),
     BottomNavigationBarItem(
       icon: Icon(
@@ -75,7 +76,7 @@ class BottomNavBarRiverpod extends ChangeNotifier {
         return IconButton(
           icon: const Icon(Icons.notifications),
           onPressed: () {
-            DuyguNav.push(const ProfilePAgeScreen());
+            DuyguNav.push(const GraphicsScreen());
           },
         );
       case 0:
@@ -83,7 +84,7 @@ class BottomNavBarRiverpod extends ChangeNotifier {
         return IconButton(
           icon: const Icon(Icons.notifications),
           onPressed: () {
-            DuyguNav.push(const ProfilePAgeScreen());
+            DuyguNav.push(const GraphicsScreen());
           },
         );
     }
@@ -92,7 +93,7 @@ class BottomNavBarRiverpod extends ChangeNotifier {
   Widget body() {
     switch (currentIndex) {
       case 1:
-        return const ProfilePAgeScreen();
+        return const GraphicsScreen();
       case 2:
         return const UserProfilePageScreen();
       case 0:
